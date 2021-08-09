@@ -5,4 +5,6 @@ from selenium import webdriver
 driver = webdriver.Chrome(executable_path='/home/shanky/PycharmProjects/chromedriver')
 driver.get("https://www.hackerrank.com/")
 driver.maximize_window()
+print(driver.title)
+print(driver.current_url)
 driver.close()
