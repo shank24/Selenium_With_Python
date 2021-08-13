@@ -6,6 +6,7 @@ driver.find_element_by_css_selector("#username").send_keys("Shank")
 driver.find_element_by_css_selector(".password").send_keys("12345")
 driver.find_element_by_css_selector(".password").clear()
 driver.find_element_by_link_text("Forgot Your Password?").click()
+driver.find_element_by_xpath("//input[@name='cancel']").click()
 driver.close()
 
 
