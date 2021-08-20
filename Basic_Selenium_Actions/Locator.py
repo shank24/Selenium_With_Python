@@ -17,8 +17,9 @@ dropdown.select_by_visible_text("Female")
 dropdown.select_by_index(0)
 
 driver.find_element_by_xpath(".//input[@type='submit']").click()
-print(driver.find_element_by_class_name("alert-success").text)
+message = driver.find_element_by_class_name("alert-success").text
 
+assert "Success" in message
 
 #Regular Expression
 #print(driver.find_element_by_class_name([class*='alert-success']).text)
