@@ -17,5 +17,5 @@ for country in countries:
         time.sleep(2)
         break
 
-print(driver.find_element_by_id("autosuggest").get_attribute('value'))
+assert driver.find_element_by_id("autosuggest").get_attribute('value') == 'India'
 driver.close()
