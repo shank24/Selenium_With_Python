@@ -10,7 +10,9 @@ checkbox = driver.find_elements_by_xpath("//input[@type='checkbox']")
 print(len(checkbox))
 
 for chBox in checkbox:
-    chBox.click()
-    assert chBox.is_selected()
+    print(chBox.get_attribute("value"))
+    if chBox.text == 'option2':
+        chBox.click()
+        assert chBox.is_selected()
 
 driver.close()
