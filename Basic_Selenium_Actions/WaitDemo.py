@@ -10,7 +10,7 @@ driver.get("https://www.rahulshettyacademy.com/seleniumPractise/#/")
 #driver.find_element_by_css_selector('input.search-keyword').send_keys("ber")
 time.sleep(4)
 length = len(driver.find_elements_by_xpath(".//div[@class='products loading']/div"))
-
+driver.implicitly_wait(5)
 print(length)
 
 driver.close()
