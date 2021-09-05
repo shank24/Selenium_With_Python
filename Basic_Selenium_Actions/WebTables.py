@@ -14,8 +14,8 @@ for val in value:
 
 print(sum)
 
-# for i in range(1,6):
-#     elements = driver.find_elements_by_xpath('//tr/td[1]')
-#     print(elements.text)
-#
+for i in range(1,6):
+    element = driver.find_element_by_xpath('//tr/td[5]')
+    print(element.text)
+
 driver.close()
