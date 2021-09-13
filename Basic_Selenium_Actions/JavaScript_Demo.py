@@ -11,5 +11,7 @@ driver.maximize_window()
 driver.find_element_by_name('name').send_keys("Cherry")
 
 #print(driver.find_element_by_name('name').text)
-driver.find_element_by_name('name').get_attribute()
+sel = driver.find_element_by_name('name').get_attribute('value')
+jsConsole = driver.execute_script('return document.getElementsByName("name")[0].value')
+assert sel == jsConsole
 driver.close()
