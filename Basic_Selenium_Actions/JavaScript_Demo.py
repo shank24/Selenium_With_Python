@@ -14,4 +14,8 @@ driver.find_element_by_name('name').send_keys("Cherry")
 sel = driver.find_element_by_name('name').get_attribute('value')
 jsConsole = driver.execute_script('return document.getElementsByName("name")[0].value')
 assert sel == jsConsole
+
+shopBtn = driver.find_element_by_css_selector("a[href*='shop']")
+driver.execute_script("arguments[0].click();" , shopBtn)
+driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
 driver.close()
