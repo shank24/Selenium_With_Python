@@ -6,6 +6,8 @@
 # -v for verbose (More Info Metadata)
 # -m tagname - py.test -m smoke -v -s
 # Running specific file with py.test filenames
+# Skip Test with - @pytest.mark.skip
+
 import pytest
 
 
@@ -15,6 +17,7 @@ def test_first_Assert_Hello_Program():
     assert msg == "Hello World", "Strings do not match"
 
 
+@pytest.mark.xfail
 def test_second_Credit():
     a = 4
     b = 6
