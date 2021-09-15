@@ -1,1 +1,3 @@
-{}
+{
+  "PyTest_Demo/test_demo1.py::test_first_program": true
+}
