@@ -1,6 +1,10 @@
 #Coding Convention - start with test_ or end with _test.
 #Pytest method should start with test
 #Code should be wrapped in a method.
+#-k for Regex (Method Name exexution)
+#-s logs in output
+#-v for verbose (More Info Metadata)
+# Running specific file with py.test filenames
 
 def test_first_program():
     msg = "Hello World"
