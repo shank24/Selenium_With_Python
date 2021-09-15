@@ -6,4 +6,7 @@ def test_first_program():
     print("Hello")
 
 
+def test_second_Credit_Greet():
+    print("Good Morning")
+
 

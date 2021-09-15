@@ -7,7 +7,7 @@ def test_first_program():
     assert msg == "Hello World", "Strings do not match"
 
 
-def test_second_program():
+def test_second_Credit():
     a = 4
     b = 6
     assert a+2 == 6, "Addition not matching"
