@@ -4,8 +4,8 @@
 import pytest
 
 
-@pytest.mark.smoke
-def test_first_program():
+@pytest.mark.skip
+def test_first_Hello_Program():
     print("Hello")
 
 

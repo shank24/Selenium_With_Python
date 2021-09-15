@@ -10,7 +10,7 @@ import pytest
 
 
 @pytest.mark.smoke
-def test_first_program():
+def test_first_Assert_Hello_Program():
     msg = "Hello World"
     assert msg == "Hello World", "Strings do not match"
 
