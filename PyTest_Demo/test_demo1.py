@@ -5,7 +5,7 @@ import pytest
 
 
 @pytest.mark.skip
-def test_first_Hello_Program():
+def test_first_Hello_Program(setup):
     print("Hello")
 
 

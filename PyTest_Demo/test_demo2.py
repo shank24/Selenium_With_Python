@@ -7,6 +7,9 @@
 # -m tagname - py.test -m smoke -v -s
 # Running specific file with py.test filenames
 # Skip Test with - @pytest.mark.skip
+# Fixtures are used for setup and tear down for test cases
+# Conftest to generalize and code re-usability, it i available to all TestCase
+
 
 import pytest
 

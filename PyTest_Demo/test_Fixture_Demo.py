@@ -1,13 +1,17 @@
 import pytest
 
 
-@pytest.fixture()
-def setup():
-    print("Init Block")
-    #Post Init and test_Fixture, Tear down ll run.
-    #yield
-    #print("Tear Down")
+@pytest.mark.usefixtures("setup")
+class TestExample:
 
+    def test_fixtureDemo(self):
+        print("Execute Steps in Fixture Demo")
 
-def test_fixtureDemo(setup):
-    print("Execute Steps in Fixture Demo")
+    def test_fixtureDemo1(self):
+        print("Execute Steps in Fixture Demo 1 ")
+
+    def test_fixtureDemo2(self):
+        print("Execute Steps in Fixture Demo 2 ")
+
+    def test_fixtureDemo3(self):
+        print("Execute Steps in Fixture Demo 3 ")
