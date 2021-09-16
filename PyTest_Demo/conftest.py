@@ -9,3 +9,10 @@ def setup():
     # Post Init and test_Fixture, Tear down ll run.
     # yield
     # print("Tear Down")
+
+
+@pytest.fixture()
+def dataLoad():
+    print("user-profile data is being created")
+    return ["Harvey","Specter", "Suits"]
+
