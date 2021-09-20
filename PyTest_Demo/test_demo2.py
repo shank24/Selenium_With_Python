@@ -8,7 +8,8 @@
 # Running specific file with py.test filenames
 # Skip Test with - @pytest.mark.skip
 # Fixtures are used for setup and tear down for test cases
-# Conftest to generalize and code re-usability, it is available to all TestCase.
+# Conftest to generalize and code re-usability
+# ,it is available to all TestCase.
 
 
 import pytest
