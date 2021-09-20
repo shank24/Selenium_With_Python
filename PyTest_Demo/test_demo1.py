@@ -4,7 +4,7 @@
 import pytest
 
 
-@pytest.mark.skip
+@pytest.mark.xfail()
 def test_first_Hello_Program(setup):
     print("Hello")
 
@@ -12,4 +12,7 @@ def test_first_Hello_Program(setup):
 def test_second_Credit_Greet():
     print("Good Morning")
 
+
+def test_crossBrowser(crossBrowser):
+    print(crossBrowser)
 
