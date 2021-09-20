@@ -14,5 +14,5 @@ def test_second_Credit_Greet():
 
 
 def test_crossBrowser(crossBrowser):
-    print(crossBrowser)
+    print(crossBrowser[1])
 
