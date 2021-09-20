@@ -14,13 +14,13 @@
 import pytest
 
 
-@pytest.mark.smoke
+@pytest.mark.skip
 def test_first_Assert_Hello_Program():
     msg = "Hello World"
     assert msg == "Hello World", "Strings do not match"
 
 
-@pytest.mark.xfail
+@pytest.mark.skip
 def test_second_Credit():
     a = 4
     b = 6
