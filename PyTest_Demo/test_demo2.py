@@ -11,7 +11,6 @@
 # Conftest to generalize and code re-usability
 # ,it is available to all TestCase.
 
-
 import pytest
 
 
