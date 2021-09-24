@@ -10,6 +10,7 @@
 # Fixtures are used for setup and tear down for test cases
 # Conftest to generalize and code re-usability
 # ,it is available to all TestCase.
+# py.test --html==report.html
 
 import pytest
 
