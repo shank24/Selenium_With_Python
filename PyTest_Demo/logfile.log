@@ -1,8 +1,5 @@
-2021-09-24 21:27:42,871 :INFO :__main__ :A Information  :16
-2021-09-24 21:27:42,871 :WARNING :__main__ :Warning :17
-2021-09-24 21:27:42,871 :CRITICAL :__main__ :Critical :18
-2021-09-24 21:27:42,871 :ERROR :__main__ :Error !! :19
-2021-09-24 21:37:04,283 :INFO :test_logging :A Information  :18
-2021-09-24 21:37:04,283 :WARNING :test_logging :Warning :19
-2021-09-24 21:37:04,283 :CRITICAL :test_logging :Critical :20
-2021-09-24 21:37:04,283 :ERROR :test_logging :Error !! :21
+2021-09-24 21:40:16,519 :DEBUG :test_logging :A debug statement :17
+2021-09-24 21:40:16,520 :INFO :test_logging :A Information  :18
+2021-09-24 21:40:16,520 :WARNING :test_logging :Warning :19
+2021-09-24 21:40:16,520 :CRITICAL :test_logging :Critical :20
+2021-09-24 21:40:16,520 :ERROR :test_logging :Error !! :21
