@@ -2,3 +2,7 @@
 2021-09-24 21:27:42,871 :WARNING :__main__ :Warning :17
 2021-09-24 21:27:42,871 :CRITICAL :__main__ :Critical :18
 2021-09-24 21:27:42,871 :ERROR :__main__ :Error !! :19
+2021-09-24 21:37:04,283 :INFO :test_logging :A Information  :18
+2021-09-24 21:37:04,283 :WARNING :test_logging :Warning :19
+2021-09-24 21:37:04,283 :CRITICAL :test_logging :Critical :20
+2021-09-24 21:37:04,283 :ERROR :test_logging :Error !! :21

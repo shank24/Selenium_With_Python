@@ -1,19 +1,21 @@
 import logging
 
-logger = logging.getLogger(__name__)
+def test_loggingDemo():
 
-#file handler object is required in addHandler
+    logger = logging.getLogger(__name__)
 
-fileHandler = logging.FileHandler('logfile.log')
-formatter = logging.Formatter("%(asctime)s :%(levelname)s :%(name)s :%(message)s :%(lineno)s")
+    #file handler object is required in addHandler
 
-fileHandler.setFormatter(formatter)
+    fileHandler = logging.FileHandler('logfile.log')
+    formatter = logging.Formatter("%(asctime)s :%(levelname)s :%(name)s :%(message)s :%(lineno)s")
 
-logger.addHandler(fileHandler)
+    fileHandler.setFormatter(formatter)
 
-logger.setLevel(logging.INFO)
-logger.debug("A debug statement")
-logger.info("A Information ")
-logger.warning("Warning")
-logger.critical("Critical")
-logger.error("Error !!")
+    logger.addHandler(fileHandler)
+
+    logger.setLevel(logging.INFO)
+    logger.debug("A debug statement")
+    logger.info("A Information ")
+    logger.warning("Warning")
+    logger.critical("Critical")
+    logger.error("Error !!")
