@@ -1,0 +1,6 @@
+1632576186951	geckodriver	INFO	Listening on 127.0.0.1:55051
+1632576187884	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileWF9rvz"
+1632576192691	Marionette	INFO	Listening on port 2828
+1632576271618	geckodriver	INFO	Listening on 127.0.0.1:46339
+1632576271621	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile9f9gG3"
+1632576273494	Marionette	INFO	Listening on port 2828
