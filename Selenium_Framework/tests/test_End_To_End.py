@@ -11,7 +11,7 @@ class TestOne(BC):
 
         self.driver.find_element_by_css_selector("a[href*='shop']").click()
 
-        # Gettign the parent element locator
+        # Getting the parent element locator
         products = self.driver.find_elements_by_xpath("//div[@class='card h-100']")
 
         # Traversing through based on Condition
@@ -26,7 +26,7 @@ class TestOne(BC):
         self.driver.find_element_by_id('country').send_keys('ind')
 
         # Explicit Wait
-        wait = WebDriverWait(driver, 7)
+        wait = WebDriverWait(self.driver, 7)
         wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "India")))
         self.driver.find_element_by_link_text("India").click()
         self.driver.find_element_by_xpath("//div[@class='checkbox checkbox-primary']").click()
