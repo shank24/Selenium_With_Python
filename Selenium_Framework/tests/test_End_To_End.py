@@ -2,14 +2,15 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
+from Selenium_Framework.pageObjects.HomePage import HomePage
 from Selenium_Framework.utilities.BaseClass import BaseClass as BC
 
 
 class TestOne(BC):
 
     def test_e2e(self):
-
-        self.driver.find_element_by_css_selector("a[href*='shop']").click()
+        homepage = HomePage(self.driver)
+        homepage.shopItems().click()
 
         # Getting the parent element locator
         products = self.driver.find_elements_by_xpath("//div[@class='card h-100']")
