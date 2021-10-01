@@ -26,8 +26,8 @@ class TestOne(BC):
                 checkOutPage.getCardFooter()[i].click()
                 #prod.find_element_by_xpath('div/button').click()
 
-        self.driver.find_element_by_css_selector("a[class*='btn-primary']").click()
-        self.driver.find_element_by_css_selector("button[class*='btn-success']").click()
+        checkOutPage.getCheckoutButton().click()
+        checkOutPage.getSuccessButton().click()
         self.driver.find_element_by_id('country').send_keys('ind')
 
         # Explicit Wait
