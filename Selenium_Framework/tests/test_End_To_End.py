@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
+from Selenium_Framework.pageObjects.CheckoutPage import CheckOutPage
 from Selenium_Framework.pageObjects.HomePage import HomePage
 from Selenium_Framework.utilities.BaseClass import BaseClass as BC
 
@@ -12,15 +13,18 @@ class TestOne(BC):
         homepage = HomePage(self.driver)
         homepage.shopItems().click()
 
+        checkOutPage = CheckOutPage(self.driver)
         # Getting the parent element locator
-        products = self.driver.find_elements_by_xpath("//div[@class='card h-100']")
-
+        products = checkOutPage.getCardTitles()
         # Traversing through based on Condition
-
+        i = -1
         for prod in products:
-            prodName = prod.find_element_by_xpath('div/h4/a').text
+            i = i + 1
+            prodName = prod.text
+            #prodName = prod.find_element_by_xpath('div/h4/a').text
             if prodName == "Blackberry":
-                prod.find_element_by_xpath('div/button').click()
+                checkOutPage.getCardFooter()[i].click()
+                #prod.find_element_by_xpath('div/button').click()
 
         self.driver.find_element_by_css_selector("a[class*='btn-primary']").click()
         self.driver.find_element_by_css_selector("button[class*='btn-success']").click()
