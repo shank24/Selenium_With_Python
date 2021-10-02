@@ -14,9 +14,9 @@ class TestHomePage(BC):
         homePage.getCheckBox().click()
 
         # Select Class Demo
-        dropdown = Select(homePage.getGender())
-        dropdown.select_by_visible_text("Female")
-        dropdown.select_by_index(0)
+        # dropdown = Select(homePage.getGender())
+        # dropdown.select_by_visible_text("Female")
+        self.selectOptionByText(homePage.getGender(),'Female')
 
         homePage.submitForm().click()
         message = homePage.getMessage().text
