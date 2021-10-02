@@ -1,6 +1,3 @@
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
 
 from Selenium_Framework.pageObjects.HomePage import HomePage
 from Selenium_Framework.utilities.BaseClass import BaseClass as BC
