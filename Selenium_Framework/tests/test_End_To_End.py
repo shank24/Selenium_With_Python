@@ -11,9 +11,8 @@ class TestOne(BC):
 
     def test_e2e(self):
         homepage = HomePage(self.driver)
-        homepage.shopItems().click()
+        checkOutPage = homepage.shopItems()
 
-        checkOutPage = CheckOutPage(self.driver)
         # Getting the parent element locator
         products = checkOutPage.getCardTitles()
         # Traversing through based on Condition
@@ -27,7 +26,7 @@ class TestOne(BC):
                 #prod.find_element_by_xpath('div/button').click()
 
         checkOutPage.getCheckoutButton().click()
-        checkOutPage.getSuccessButton().click()
+        confirmPage = checkOutPage.getSuccessButton()
         self.driver.find_element_by_id('country').send_keys('ind')
 
         # Explicit Wait

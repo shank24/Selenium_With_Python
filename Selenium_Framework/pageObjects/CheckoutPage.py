@@ -1,5 +1,7 @@
 from selenium.webdriver.common.by import By
 
+from Selenium_Framework.pageObjects.ConfirmPage import ConfirmPage
+
 
 class CheckOutPage:
 
@@ -21,4 +23,6 @@ class CheckOutPage:
         return self.driver.find_element(*CheckOutPage.checkOutBtn)
 
     def getSuccessButton(self):
-        return self.driver.find_element(*CheckOutPage.successBtn)
+        self.driver.find_element(*CheckOutPage.successBtn).click()
+        confirmPage = ConfirmPage(self.driver)
+        return confirmPage
