@@ -2,7 +2,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from Selenium_Framework.pageObjects.CheckoutPage import CheckOutPage
 from Selenium_Framework.pageObjects.HomePage import HomePage
 from Selenium_Framework.utilities.BaseClass import BaseClass as BC
 
@@ -11,6 +10,8 @@ class TestOne(BC):
 
     def test_e2e(self):
         homepage = HomePage(self.driver)
+
+        
         checkOutPage = homepage.shopItems()
 
         # Getting the parent element locator
@@ -26,8 +27,9 @@ class TestOne(BC):
                 #prod.find_element_by_xpath('div/button').click()
 
         checkOutPage.getCheckoutButton().click()
+        #Confirm Page Operations
         confirmPage = checkOutPage.getSuccessButton()
-        self.driver.find_element_by_id('country').send_keys('ind')
+        confirmPage.searchCountry('ind')
 
         # Explicit Wait
         wait = WebDriverWait(self.driver, 7)
