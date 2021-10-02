@@ -9,9 +9,9 @@ from Selenium_Framework.utilities.BaseClass import BaseClass as BC
 class TestOne(BC):
 
     def test_e2e(self):
+        # Operations Of Home Page
         homepage = HomePage(self.driver)
-
-        
+        # Operations Of CheckOut Page
         checkOutPage = homepage.shopItems()
 
         # Getting the parent element locator
@@ -21,19 +21,20 @@ class TestOne(BC):
         for prod in products:
             i = i + 1
             prodName = prod.text
-            #prodName = prod.find_element_by_xpath('div/h4/a').text
+            # prodName = prod.find_element_by_xpath('div/h4/a').text
             if prodName == "Blackberry":
                 checkOutPage.getCardFooter()[i].click()
-                #prod.find_element_by_xpath('div/button').click()
+                # prod.find_element_by_xpath('div/button').click()
 
         checkOutPage.getCheckoutButton().click()
-        #Confirm Page Operations
+        # Operations Of Confirm Page
         confirmPage = checkOutPage.getSuccessButton()
         confirmPage.searchCountry('ind')
 
         # Explicit Wait
-        wait = WebDriverWait(self.driver, 7)
-        wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "India")))
+        #element = WebDriverWait(self.driver, 7).until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "India")))
+
+        self.verifyLinkPresence('India')
         self.driver.find_element_by_link_text("India").click()
         self.driver.find_element_by_xpath("//div[@class='checkbox checkbox-primary']").click()
         self.driver.find_element_by_css_selector("[type='submit']").click()
