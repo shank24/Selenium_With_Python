@@ -1,0 +1,12 @@
+2021-10-04 18:40:44,057 :INFO :test_formSubmission :On HomePage :11
+2021-10-04 18:40:44,057 :INFO :test_formSubmission :Sending FirstName & Email :13
+2021-10-04 18:40:44,316 :INFO :test_formSubmission :Hitting Submit :19
+2021-10-04 18:40:44,418 :INFO :test_formSubmission :Asserting Success Message :23
+2021-10-04 18:40:44,563 :INFO :test_formSubmission :On HomePage :11
+2021-10-04 18:40:44,563 :INFO :test_formSubmission :On HomePage :11
+2021-10-04 18:40:44,563 :INFO :test_formSubmission :Sending FirstName & Email :13
+2021-10-04 18:40:44,563 :INFO :test_formSubmission :Sending FirstName & Email :13
+2021-10-04 18:40:44,859 :INFO :test_formSubmission :Hitting Submit :19
+2021-10-04 18:40:44,859 :INFO :test_formSubmission :Hitting Submit :19
+2021-10-04 18:40:44,932 :INFO :test_formSubmission :Asserting Success Message :23
+2021-10-04 18:40:44,932 :INFO :test_formSubmission :Asserting Success Message :23

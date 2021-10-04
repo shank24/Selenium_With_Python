@@ -1,3 +1,5 @@
+import inspect
+import logging
 
 import pytest
 from selenium.webdriver.common.by import By
@@ -15,3 +17,15 @@ class BaseClass:
     def selectOptionByText(self, locator, textToSelect):
         selectElem = Select(locator)
         selectElem.select_by_visible_text(textToSelect)
+
+    def getLogger(self):
+        loggerName = inspect.stack()[1][3]
+        logger = logging.getLogger(loggerName)
+
+            # file handler object is required in addHandler
+        fileHandler = logging.FileHandler('logfile.log')
+        formatter = logging.Formatter("%(asctime)s :%(levelname)s :%(name)s :%(message)s :%(lineno)s")
+        fileHandler.setFormatter(formatter)
+        logger.addHandler(fileHandler)
+        logger.setLevel(logging.DEBUG)
+        return logger
