@@ -7,10 +7,10 @@ class TestHomePage(BC):
 
     def test_formSubmission(self,getData):
         homePage = HomePage(self.driver)
-        homePage.getName().send_keys(getData[0])
-        homePage.getEmail().send_keys(getData[1])
+        homePage.getName().send_keys(getData["FirstName"])
+        homePage.getEmail().send_keys(getData["Email"])
         homePage.getCheckBox().click()
-        self.selectOptionByText(homePage.getGender(), getData[2])
+        self.selectOptionByText(homePage.getGender(), getData["Gender"])
 
         homePage.submitForm().click()
         message = homePage.getMessage().text
@@ -18,6 +18,6 @@ class TestHomePage(BC):
         assert "Success" in message
         self.driver.refresh()
 
-    @pytest.fixture(params=[("Shank", "Karan@gmail.com", "Male"), ("Charneet", "Charneet@gmail.com", "Female")])
+    @pytest.fixture(params=[{"FirstName" : "Shank", "Email" : "Karan@gmail.com", "Gender" : "Male" }, {"FirstName" : "Cherry", "Email" : "Charneet@gmail.com", "Gender" : "Female" }])
     def getData(self, request):
         return request.param
