@@ -12,10 +12,6 @@ class TestHomePage(BC):
         homePage.getName().send_keys("Shank")
         homePage.getEmail().send_keys("Karan@gmail.com")
         homePage.getCheckBox().click()
-
-        # Select Class Demo
-        # dropdown = Select(homePage.getGender())
-        # dropdown.select_by_visible_text("Female")
         self.selectOptionByText(homePage.getGender(),'Female')
 
         homePage.submitForm().click()

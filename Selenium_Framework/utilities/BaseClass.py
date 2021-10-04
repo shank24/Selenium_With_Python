@@ -12,6 +12,6 @@ class BaseClass:
     def verifyLinkPresence(self, textToVerify):
         element = WebDriverWait(self.driver, 7).until(EC.presence_of_element_located((By.LINK_TEXT, textToVerify)))
 
-    def selectOptionByText(self,locator, textToSelect):
+    def selectOptionByText(self, locator, textToSelect):
         selectElem = Select(locator)
         selectElem.select_by_visible_text(textToSelect)
