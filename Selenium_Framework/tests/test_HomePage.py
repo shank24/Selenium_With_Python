@@ -1,21 +1,22 @@
-from selenium import webdriver
-from selenium.webdriver.support.select import Select
-
+import pytest
 from Selenium_Framework.pageObjects.HomePage import HomePage
 from Selenium_Framework.utilities.BaseClass import BaseClass as BC
 
 
 class TestHomePage(BC):
 
-    def test_formSubmission(self):
+    def test_formSubmission(self,getData):
         homePage = HomePage(self.driver)
-        homePage.getName().send_keys("Shank")
-        homePage.getEmail().send_keys("Karan@gmail.com")
+        homePage.getName().send_keys(getData[0])
+        homePage.getEmail().send_keys(getData[1])
         homePage.getCheckBox().click()
-        self.selectOptionByText(homePage.getGender(),'Female')
+        self.selectOptionByText(homePage.getGender(), getData[2])
 
         homePage.submitForm().click()
         message = homePage.getMessage().text
 
         assert "Success" in message
 
+    @pytest.fixture(params=[("Shank", "Karan@gmail.com", "Male"), ("Charneet", "Charneet@gmail.com", "Female")])
+    def getData(self, request):
+        return request.param
