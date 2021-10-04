@@ -16,6 +16,7 @@ class TestHomePage(BC):
         message = homePage.getMessage().text
 
         assert "Success" in message
+        self.driver.refresh()
 
     @pytest.fixture(params=[("Shank", "Karan@gmail.com", "Male"), ("Charneet", "Charneet@gmail.com", "Female")])
     def getData(self, request):
