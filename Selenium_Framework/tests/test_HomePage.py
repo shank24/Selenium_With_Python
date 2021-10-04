@@ -1,5 +1,6 @@
 import pytest
 from Selenium_Framework.pageObjects.HomePage import HomePage
+from Selenium_Framework.testData.HomePageData import HomePageData
 from Selenium_Framework.utilities.BaseClass import BaseClass as BC
 
 
@@ -18,6 +19,6 @@ class TestHomePage(BC):
         assert "Success" in message
         self.driver.refresh()
 
-    @pytest.fixture(params=[{"FirstName" : "Shank", "Email" : "Karan@gmail.com", "Gender" : "Male" }, {"FirstName" : "Cherry", "Email" : "Charneet@gmail.com", "Gender" : "Female" }])
+    @pytest.fixture(params=HomePageData.test_HomePage_data)
     def getData(self, request):
         return request.param
