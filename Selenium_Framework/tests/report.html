@@ -241,7 +241,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 04-Oct-2021 at 18:48:07 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.22.1</p>
+    <p>Report generated on 05-Oct-2021 at 22:22:57 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v1.22.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -257,8 +257,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>2.7.12</td></tr></table>
     <h2>Summary</h2>
-    <p>2 tests ran in 4.45 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>3 tests ran in 15.32 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -269,11 +269,21 @@ function filter_table(elem) {
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">test_End_To_End.py::TestOne::test_e2e</td>
+          <td class="col-duration">8.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div><div><img src="test_End_To_End.py_TestOne_test_e2e.png" alt="screenshot" style="width:304px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">self = &lt;Selenium_Framework.tests.test_End_To_End.TestOne instance at 0x7f0a5e366ab8&gt;<br/><br/>    def test_e2e(self):<br/>        # Operations Of Home Page<br/>        homepage = HomePage(self.driver)<br/>        # Operations Of CheckOut Page<br/>        checkOutPage = homepage.shopItems()<br/>    <br/>        # Getting the parent element locator<br/>        products = checkOutPage.getCardTitles()<br/>        # Traversing through based on Condition<br/>        i = -1<br/>        for prod in products:<br/>            i = i + 1<br/>            prodName = prod.text<br/>            # prodName = prod.find_element_by_xpath('div/h4/a').text<br/>            if prodName == "Blackberry":<br/>                checkOutPage.getCardFooter()[i].click()<br/>                # prod.find_element_by_xpath('div/button').click()<br/>    <br/>        checkOutPage.getCheckoutButton().click()<br/>        # Operations Of Confirm Page<br/>        confirmPage = checkOutPage.getSuccessButton()<br/>        confirmPage.searchCountry('ind')<br/>    <br/>        # Explicit Wait<br/>        #element = WebDriverWait(self.driver, 7).until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "India")))<br/>    <br/>        self.verifyLinkPresence('India')<br/>        self.driver.find_element_by_link_text("India").click()<br/>        self.driver.find_element_by_xpath("//div[@class='checkbox checkbox-primary']").click()<br/>        self.driver.find_element_by_css_selector("[type='submit']").click()<br/>        successText = self.driver.find_element_by_class_name("alert-success").text<br/>    <br/>&gt;       assert "Success! Thank youBRO!" in successText<br/><span class="error">E       AssertionError: assert 'Success! Thank youBRO!' in '×\nSuccess! Thank you! Your order will be delivered in next few weeks :-).'</span><br/><br/>test_End_To_End.py:40: AssertionError<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_HomePage.py::TestHomePage::test_formSubmission[getData0]</td>
-          <td class="col-duration">0.45</td>
+          <td class="col-duration">0.38</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -285,7 +295,7 @@ function filter_table(elem) {
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">test_HomePage.py::TestHomePage::test_formSubmission[getData1]</td>
-          <td class="col-duration">0.63</td>
+          <td class="col-duration">0.49</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
